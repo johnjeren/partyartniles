@@ -1,0 +1,5 @@
+<?php
+getHeader();
+componentizerRenderPageComponents();
+
+getFooter();

@@ -1,0 +1,749 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-17 14:55+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: header.php:52 framework/functions/theme-options.php:22
+msgid "Blog"
+msgstr ""
+
+#: header.php:86
+#, php-format
+msgid "Search Results: <span class=\"colored\">%s</span>"
+msgstr ""
+
+#: comments.php:15
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:16
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:17
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:25
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:194
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:195
+msgid "One Page Menu"
+msgstr ""
+
+#: functions.php:390
+msgid "Older posts"
+msgstr ""
+
+#: functions.php:391
+msgid "Newer posts"
+msgstr ""
+
+#: functions.php:412
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:412 functions.php:441
+msgid "Edit"
+msgstr ""
+
+#: functions.php:425
+msgid "Post author"
+msgstr ""
+
+#: functions.php:430
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions.php:436
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:443
+msgid "Reply"
+msgstr ""
+
+#: functions.php:531
+msgid "Fullscreen (only with Template: Visual Composer)"
+msgstr ""
+
+#. If there are characters in your language that are not
+#. supported by Lora, translate this to 'off'. Do not translate
+#. into your own language.
+#: functions.php:595
+msgctxt "Raleway font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:596
+msgctxt "Roboto Mono font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:597
+msgctxt "Caveat font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:598
+msgctxt "Great Vibes font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:651 framework/functions/breadcrumbs.php:7
+msgid "Home"
+msgstr ""
+
+#: blog.php:11 blog.php:28 blog.php:46 blog.php:62
+msgid "Our Latest News"
+msgstr ""
+
+#: woocommerce/content-product.php:34
+msgid "Sale"
+msgstr ""
+
+#: woocommerce/content-product.php:35
+msgid "Trend"
+msgstr ""
+
+#: woocommerce/loop/result-count.php:39
+#, php-format
+msgid "Showing the single result"
+msgid_plural "Showing all %d results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/loop/result-count.php:41
+#, php-format
+msgctxt "%1$d = first, %2$d = last, %3$d = total"
+msgid "Showing the single result"
+msgid_plural "Showing %1$d&ndash;%2$d of %3$d results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product/product-attributes.php:38
+msgid "Weight"
+msgstr ""
+
+#: woocommerce/single-product/product-attributes.php:45
+msgid "Dimensions"
+msgstr ""
+
+#: woocommerce/single-product/title.php:29
+msgid "SKU:"
+msgstr ""
+
+#: woocommerce/single-product/title.php:29
+msgid "N/A"
+msgstr ""
+
+#: framework/meta/metabox-class.php:423 framework/meta/metabox-class.php:423
+#: framework/meta/metabox-class.php:462 framework/meta/metabox-class.php:462
+#: framework/meta/metabox-class.php:1959 framework/meta/metabox-class.php:1959
+msgid "Remove"
+msgstr ""
+
+#: framework/meta/metabox-class.php:435 framework/meta/metabox-class.php:435
+msgid "Add"
+msgstr ""
+
+#: framework/meta/metabox-class.php:789
+msgid "Select a color"
+msgstr ""
+
+#: framework/meta/metabox-class.php:1822 framework/meta/metabox-class.php:1830
+msgid "Sorry, you cannot upload this file type for this field."
+msgstr ""
+
+#: framework/meta/metabox-class.php:1994 framework/meta/metabox-class.php:1994
+msgid "Remove me"
+msgstr ""
+
+#: framework/formats/format.php:77 framework/formats/format-quote.php:95
+#: framework/formats/format-gallery.php:88
+#: framework/formats/format-audio.php:93 framework/formats/format-link.php:95
+#: framework/formats/format-image.php:86 framework/formats/format-video.php:92
+msgid "Read More"
+msgstr ""
+
+#: framework/functions/theme-options.php:17
+msgid "Header & Logo & Favicon"
+msgstr ""
+
+#: framework/functions/theme-options.php:27
+msgid "Single Portfolio"
+msgstr ""
+
+#: framework/functions/theme-options.php:32
+msgid "Footer"
+msgstr ""
+
+#: framework/functions/theme-options.php:37
+msgid "404 Error"
+msgstr ""
+
+#: framework/functions/theme-options.php:42
+msgid "Other"
+msgstr ""
+
+#: framework/functions/theme-options.php:48
+msgid "WooCommerce"
+msgstr ""
+
+#: framework/functions/sidebars.php:11
+msgid "Main Sidebar"
+msgstr ""
+
+#: framework/functions/sidebars.php:13
+msgid ""
+"Appears on posts and pages except the optional Front Page template, which "
+"has its own widgets"
+msgstr ""
+
+#: framework/functions/sidebars.php:21
+msgid "Footer Sidebar 1"
+msgstr ""
+
+#: framework/functions/sidebars.php:23 framework/functions/sidebars.php:34
+#: framework/functions/sidebars.php:44 framework/functions/sidebars.php:54
+msgid "Appears on all pages at the bottom of site."
+msgstr ""
+
+#: framework/functions/sidebars.php:32
+msgid "Footer Sidebar 2"
+msgstr ""
+
+#: framework/functions/sidebars.php:42
+msgid "Footer Sidebar 3"
+msgstr ""
+
+#: framework/functions/sidebars.php:52
+msgid "Footer Sidebar 4"
+msgstr ""
+
+#: framework/functions/sidebars.php:62
+msgid "WooCommerce Sidebar"
+msgstr ""
+
+#: framework/functions/sidebars.php:64
+msgid "Add your widgets to shop page"
+msgstr ""
+
+#: framework/functions/breadcrumbs.php:8
+#, php-format
+msgid "Archive by Category \"%s\""
+msgstr ""
+
+#: framework/functions/breadcrumbs.php:9
+#, php-format
+msgid "Search Results for \"%s\" Query"
+msgstr ""
+
+#: framework/functions/breadcrumbs.php:10
+#, php-format
+msgid "Posts Tagged \"%s\""
+msgstr ""
+
+#: framework/functions/breadcrumbs.php:11
+#, php-format
+msgid "Articles Posted by %s"
+msgstr ""
+
+#: framework/functions/breadcrumbs.php:12
+msgid "Error 404"
+msgstr ""
+
+#: framework/functions/breadcrumbs.php:143
+msgid " - Page"
+msgstr ""
+
+#: framework/functions/woocommerce.php:56
+#, php-format
+msgid "Rated %s out of 5"
+msgstr ""
+
+#: framework/functions/woocommerce.php:110
+#: framework/functions/woocommerce.php:132 framework/content/menu.php:45
+#, php-format
+msgid "%d"
+msgid_plural "%d"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/functions/woocommerce.php:127
+msgid "View your shopping cart"
+msgstr ""
+
+#: framework/functions/woocommerce.php:128
+msgid "Start shopping"
+msgstr ""
+
+#: framework/content/category.php:4 framework/content/tags.php:4
+#: framework/content/archive.php:7 framework/content/archive.php:9
+#: framework/content/archive.php:11
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: framework/content/category.php:19
+msgid "Sorry, no posts in this category."
+msgstr ""
+
+#: framework/content/404.php:7
+msgid "404"
+msgstr ""
+
+#: framework/content/404.php:32 framework/content/404.php:34
+#: framework/content/404.php:36 framework/content/footer.php:211
+msgid ""
+"<a href=\"http://forbetterweb.com\">©2017 <i class=\"fa fa-heart fa-fw\"></i>"
+" forbetterweb.com</a>"
+msgstr ""
+
+#: framework/content/tags.php:21
+msgid "Sorry, no posts found under this tag."
+msgstr ""
+
+#: framework/content/single.php:43 framework/content/single.php:71
+#: framework/content/single.php:97
+msgid "Sorry, no posts. "
+msgstr ""
+
+#: framework/content/content.php:42
+msgid "Nothing was found"
+msgstr ""
+
+#: framework/content/archive.php:9
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: framework/content/archive.php:11
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: framework/content/archive.php:13
+msgid "Archives"
+msgstr ""
+
+#: framework/content/archive.php:27
+msgid "Sorry, no posts in archives."
+msgstr ""
+
+#: framework/content/search.php:22
+msgid "Nothing Found"
+msgstr ""
+
+#: framework/content/search.php:26
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: framework/content/footer.php:137 framework/content/footer.php:167
+msgid ""
+"Powered by <a href=\"https://themeforest.net/user/forbetterweb\" "
+"target=\"_blank\">forbetterweb.com</a>"
+msgstr ""
+
+#: framework/content/footer.php:142
+msgid "We <i class=\"fa fa-heart fa-fw\"></i> creative people"
+msgstr ""
+
+#: framework/content/footer.php:210
+msgid ""
+"<a href=\"https://themeforest.net/item/universal-smart-multipurpose-"
+"wordpress-theme/17680955?ref=ForBetterWeb\" class=\"btn btn-lg btn-gray\">"
+"Purchase now</a>"
+msgstr ""
+
+#: framework/functions/options/logo.php:6
+msgid "Type of menu"
+msgstr ""
+
+#: framework/functions/options/logo.php:11
+msgid "Standard"
+msgstr ""
+
+#: framework/functions/options/logo.php:12
+msgid "Onepage"
+msgstr ""
+
+#: framework/functions/options/logo.php:19
+msgid "Add logo"
+msgstr ""
+
+#: framework/functions/options/logo.php:28
+msgid "Add retina logo (2x)"
+msgstr ""
+
+#: framework/functions/options/logo.php:37
+msgid "Add dark logo"
+msgstr ""
+
+#: framework/functions/options/logo.php:46
+msgid "Add retina dark logo (2x)"
+msgstr ""
+
+#: framework/functions/options/logo.php:55
+msgid "Favicon"
+msgstr ""
+
+#: framework/functions/options/logo.php:56
+msgid "Image 16x16, ico/png"
+msgstr ""
+
+#: framework/functions/options/logo.php:65
+msgid "Favicon iPhone"
+msgstr ""
+
+#: framework/functions/options/logo.php:66
+msgid "Image 114x114, ico/png"
+msgstr ""
+
+#: framework/functions/options/logo.php:75
+msgid "Favicon iPad"
+msgstr ""
+
+#: framework/functions/options/logo.php:76
+msgid "Image 144x144, ico/png"
+msgstr ""
+
+#: framework/functions/options/404.php:6
+msgid "404 Image"
+msgstr ""
+
+#: framework/functions/options/404.php:7
+msgid "Change 404 image"
+msgstr ""
+
+#: framework/functions/options/404.php:16
+msgid "404 Text First"
+msgstr ""
+
+#: framework/functions/options/404.php:17
+msgid "Change 404 text one"
+msgstr ""
+
+#: framework/functions/options/404.php:26
+msgid "404 Text Second"
+msgstr ""
+
+#: framework/functions/options/404.php:27
+msgid "Change 404 text two"
+msgstr ""
+
+#: framework/functions/options/other.php:6
+msgid "Search Image"
+msgstr ""
+
+#: framework/functions/options/other.php:15
+msgid "Scroll Up"
+msgstr ""
+
+#: framework/functions/options/other.php:20
+#: framework/functions/options/other.php:33
+msgid "Show"
+msgstr ""
+
+#: framework/functions/options/other.php:21
+#: framework/functions/options/other.php:34
+msgid "Hide"
+msgstr ""
+
+#: framework/functions/options/other.php:28
+msgid "Preloader"
+msgstr ""
+
+#: framework/functions/options/content.php:6
+msgid "Post Style"
+msgstr ""
+
+#: framework/functions/options/content.php:12
+msgid "Classic"
+msgstr ""
+
+#: framework/functions/options/content.php:13
+msgid "Medium"
+msgstr ""
+
+#: framework/functions/options/content.php:14
+msgid "Masonry"
+msgstr ""
+
+#: framework/functions/options/content.php:21
+msgid "Post Image Height"
+msgstr ""
+
+#: framework/functions/options/content.php:22
+msgid "Set your own height of image in px (ex: 500px)"
+msgstr ""
+
+#: framework/functions/options/content.php:32
+#: framework/functions/options/footer.php:194
+msgid "Social Media"
+msgstr ""
+
+#: framework/functions/options/content.php:33
+msgid "Choose your social media in single post"
+msgstr ""
+
+#: framework/functions/options/content.php:38
+#: framework/functions/options/footer.php:204
+msgid "Facebook"
+msgstr ""
+
+#: framework/functions/options/content.php:39
+#: framework/functions/options/footer.php:195
+msgid "Twitter"
+msgstr ""
+
+#: framework/functions/options/content.php:40
+#: framework/functions/options/footer.php:307
+msgid "Pinterest"
+msgstr ""
+
+#: framework/functions/options/content.php:41
+#: framework/functions/options/footer.php:269
+msgid "Tumblr"
+msgstr ""
+
+#: framework/functions/options/content.php:42
+#: framework/functions/options/footer.php:213
+msgid "Google Plus"
+msgstr ""
+
+#: framework/functions/options/content.php:43
+#: framework/functions/options/footer.php:222
+msgid "LinkedIn"
+msgstr ""
+
+#: framework/functions/options/content.php:51
+msgid "Sidebar Position"
+msgstr ""
+
+#: framework/functions/options/content.php:52
+msgid "Sidebars within site, except single post."
+msgstr ""
+
+#: framework/functions/options/content.php:65
+msgid "Single Sidebar Position"
+msgstr ""
+
+#: framework/functions/options/content.php:66
+msgid "Sidebars in single post."
+msgstr ""
+
+#: framework/functions/options/content.php:81
+msgid "Link To Blog"
+msgstr ""
+
+#: framework/functions/options/content.php:82
+msgid "Set your link to blogroll page"
+msgstr ""
+
+#: framework/functions/options/woo.php:6
+msgid "Shop Image"
+msgstr ""
+
+#: framework/functions/options/woo.php:16
+msgid "Shop Cart In Menu"
+msgstr ""
+
+#: framework/functions/options/woo.php:21
+#: framework/functions/options/footer.php:11
+#: framework/functions/options/footer.php:40
+msgid "Enable"
+msgstr ""
+
+#: framework/functions/options/woo.php:22
+#: framework/functions/options/footer.php:12
+#: framework/functions/options/footer.php:41
+msgid "Disable"
+msgstr ""
+
+#: framework/functions/options/woo.php:29
+msgid "The number of posts displayed"
+msgstr ""
+
+#: framework/functions/options/woo.php:37
+msgid "Shop Sidebar Position"
+msgstr ""
+
+#: framework/functions/options/portfolio.php:6
+msgid "Top Image"
+msgstr ""
+
+#: framework/functions/options/portfolio.php:30
+msgid "Link to Works"
+msgstr ""
+
+#: framework/functions/options/portfolio.php:31
+msgid "Add link to \"All Works\""
+msgstr ""
+
+#: framework/functions/options/footer.php:6
+msgid "Widgets Footer"
+msgstr ""
+
+#: framework/functions/options/footer.php:20
+msgid "Count Of Widgets"
+msgstr ""
+
+#: framework/functions/options/footer.php:25
+msgid "1/3 + 1/4 + 1/6 + 1/4"
+msgstr ""
+
+#: framework/functions/options/footer.php:26
+#: framework/functions/options/footer.php:69
+msgid "1/4 + 1/4 + 1/4"
+msgstr ""
+
+#: framework/functions/options/footer.php:27
+msgid "1/3 + 1/3 + 1/3 + 1/3"
+msgstr ""
+
+#: framework/functions/options/footer.php:28
+msgid "1/4 + 2/4 + 1/4"
+msgstr ""
+
+#: framework/functions/options/footer.php:35
+msgid "Bottom Footer"
+msgstr ""
+
+#: framework/functions/options/footer.php:48
+msgid "Bottom Footer Color"
+msgstr ""
+
+#: framework/functions/options/footer.php:53
+msgid "White"
+msgstr ""
+
+#: framework/functions/options/footer.php:54
+msgid "Grey"
+msgstr ""
+
+#: framework/functions/options/footer.php:55
+msgid "Dark"
+msgstr ""
+
+#: framework/functions/options/footer.php:62
+msgid "Count Of Row"
+msgstr ""
+
+#: framework/functions/options/footer.php:67
+msgid "1/12"
+msgstr ""
+
+#: framework/functions/options/footer.php:68
+msgid "1/6 + 1/6"
+msgstr ""
+
+#: framework/functions/options/footer.php:75
+msgid "Show arrow to up?"
+msgstr ""
+
+#: framework/functions/options/footer.php:80
+#: framework/functions/options/footer.php:100
+msgid "Yes"
+msgstr ""
+
+#: framework/functions/options/footer.php:81
+#: framework/functions/options/footer.php:101
+msgid "No"
+msgstr ""
+
+#: framework/functions/options/footer.php:95
+msgid "Button"
+msgstr ""
+
+#: framework/functions/options/footer.php:115
+msgid "Button Link"
+msgstr ""
+
+#: framework/functions/options/footer.php:130
+#: framework/functions/options/footer.php:146
+#: framework/functions/options/footer.php:162
+msgid "Copyright Text"
+msgstr ""
+
+#: framework/functions/options/footer.php:178
+msgid "Middle Text"
+msgstr ""
+
+#: framework/functions/options/footer.php:232
+msgid "Dribbble"
+msgstr ""
+
+#: framework/functions/options/footer.php:241
+msgid "Instagram"
+msgstr ""
+
+#: framework/functions/options/footer.php:250
+msgid "YouTube"
+msgstr ""
+
+#: framework/functions/options/footer.php:259
+msgid "Flickr"
+msgstr ""
+
+#: framework/functions/options/footer.php:280
+msgid "Foursquare"
+msgstr ""
+
+#: framework/functions/options/footer.php:289
+msgid "VK"
+msgstr ""
+
+#: framework/functions/options/footer.php:298
+msgid "Behance"
+msgstr ""
+
+#: framework/functions/options/footer.php:316
+msgid "GitHub"
+msgstr ""
+
+#: framework/functions/options/footer.php:326
+msgid "RSS"
+msgstr ""
+
+#. Name of the theme
+msgid "Universal WP"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Universal - modern multi-purpose, minimalistic and easy to use, lightweight "
+"and fast loading, multi and one page WordPress theme for building simple and "
+"beautiful business or personal website."
+msgstr ""
+
+#. URI of the theme
+msgid "http://forbetterweb.com/universal/"
+msgstr ""
+
+#. Author of the theme
+msgid "ForBetterWeb"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://themeforest.net/user/ForBetterWeb"
+msgstr ""

@@ -1,0 +1,19 @@
+.molecule-cta{
+  text-align: center;
+  padding: 50px;
+}
+.molecule-cta h3{
+  font-size: 300%;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+.molecule-cta p{
+  font-size: 250%;
+}
+
+.molecule-cta .btn{
+  font-size: 250%;
+  line-height: 2em;
+  padding: 0px 50px;
+}

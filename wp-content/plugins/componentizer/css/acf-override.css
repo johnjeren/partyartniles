@@ -1,0 +1,21 @@
+.acf-field-clone > .acf-label{
+  display: none;
+}
+
+.acf-field-clone > .acf-input{
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.acf-field-clone > .acf-input > .acf-clone-fields {
+  border: 0px solid white !important;
+}
+
+.acf-field-clone > .acf-label {
+  width: 0% !important;
+  border: 0px solid white !important;
+}
+
+.acf-field-clone:before {
+  display: none !important;
+}

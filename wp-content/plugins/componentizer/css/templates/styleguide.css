@@ -1,0 +1,15 @@
+.color-block{
+  border-radius: 10px;
+  border: 2px solid #CCC;
+  padding: 5px;
+}
+
+.color-block .color{
+  height: 100px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.fonts p{
+  font-size: 2rem
+}

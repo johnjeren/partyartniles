@@ -1,0 +1,18 @@
+html,body{
+  overflow-x: hidden;
+}
+
+.footer{
+  background-color: #CCC;
+  padding: 50px;
+}
+
+/* fade image in after load */
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
+}

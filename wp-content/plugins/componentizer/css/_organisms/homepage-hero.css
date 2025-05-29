@@ -1,0 +1,39 @@
+.homepage-hero{
+  min-height: 230px;
+  position: relative;
+}
+
+.homepage-hero img{
+  position: relative;
+}
+
+.homepage-hero .hero-content{
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  width: 80%;
+}
+
+.homepage-hero h2{
+  font-size: 3rem;
+  color: #FFF;
+  text-shadow: 0px 0px 10px #000;
+}
+
+.homepage-hero p{
+  color: #EEE;
+  text-shadow: 0px 0px 10px #000;
+}
+
+
+@media (max-width: 768px) {
+  .homepage-hero h2{
+    font-size: 2rem;
+  }
+
+  .homepage-hero .hero-content{
+    left: 5%;
+    top: 14%;
+    width: 90%;
+  }
+}

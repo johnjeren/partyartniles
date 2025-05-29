@@ -1,0 +1,19 @@
+/*
+Theme Name: Base Theme
+*/
+
+.navbar-header .navbar-brand{
+    height: auto;
+}
+.navbar-header .navbar-brand img{
+  max-height: 75px!important;
+}
+
+@media (min-width: 1024px){
+  .bootsnav.navbar.bootsnav ul.nav > li > a {
+    padding: 43px 15px!important;
+  }
+}
+.title-image-back{
+  height: 175px!important;
+}

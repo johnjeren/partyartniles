@@ -1,0 +1,26 @@
+html{
+  font-size: 100%;
+  @media(max-width: 767px){
+    font-size: 90%;
+  }
+}
+body{
+    font-family: 'Open Sans', sans-serif!important;
+}
+.title-image-back{
+  .tag{
+    h1{
+      font-size: 3rem;
+    }
+  }
+}
+
+p{
+  font-size: 1.4rem;
+}
+h2{
+  font-size: 2.4rem;
+}
+h3{
+  font-size: 2rem;
+}

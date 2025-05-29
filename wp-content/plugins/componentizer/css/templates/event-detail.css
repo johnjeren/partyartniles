@@ -1,0 +1,58 @@
+
+
+/*
+ ********************************
+ *
+ *  Register CSS
+ *
+ */
+.input-group .btn-fill {
+  background-color: #98d361;
+}
+.input-group .btn-fill:hover {
+  background-color: #71b532;
+}
+
+
+
+/*
+******************************************
+*
+*   IMAGE HOVER EFFECT CUSTOM CSS
+*
+*/
+.view-first .mask {
+  background-color: rgba(152, 211, 97, 0.5);
+}
+.mask ul li a:hover {
+  background-color: transparent !important;
+}
+/*
+******************************************
+*
+*   NICE SCROLL CUSTOM CSS
+*
+*/
+.nicescroll-rails > div {
+  background-color: #98d361 !important;
+}
+/*
+******************************************
+*
+*   FLEX SLIDER CSS
+*
+*/
+a.next:hover,
+a.prev:hover {
+  background-color: #98d361 !important;
+  border-color: #98d361;
+}
+/*
+******************************************
+*
+*   PRELOADER CSS
+*
+*/
+.bubblingG span {
+  background: #98d361;
+}

@@ -1,0 +1,28 @@
+[22-Oct-2019 14:31:26 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/johnjere/public_html/partyartniles.com/wp-content/themes/twentyseventeen/404.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/johnjere/public_html/partyartniles.com/wp-content/themes/twentyseventeen/404.php on line 13
+[12-Dec-2019 17:35:12 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_template_directory() in /home/johnjere/public_html/partyartniles.com/wp-content/themes/twentyseventeen/functions.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/johnjere/public_html/partyartniles.com/wp-content/themes/twentyseventeen/functions.php on line 16
+[24-May-2020 11:27:34 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/johnjere/public_html/partyartniles.com/wp-content/themes/twentyseventeen/404.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/johnjere/public_html/partyartniles.com/wp-content/themes/twentyseventeen/404.php on line 13
+[03-Jun-2020 03:33:40 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_template_directory() in /home/johnjere/public_html/partyartniles.com/wp-content/themes/twentyseventeen/functions.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/johnjere/public_html/partyartniles.com/wp-content/themes/twentyseventeen/functions.php on line 16
+[03-Dec-2020 08:22:55 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/johnjere/public_html/partyartniles.com/wp-content/themes/twentyseventeen/404.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/johnjere/public_html/partyartniles.com/wp-content/themes/twentyseventeen/404.php on line 13
+[02-Jan-2021 15:33:29 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/johnjere/public_html/partyartniles.com/wp-content/themes/twentyseventeen/404.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/johnjere/public_html/partyartniles.com/wp-content/themes/twentyseventeen/404.php on line 13
+[07-Jan-2021 09:21:42 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/johnjere/public_html/partyartniles.com/wp-content/themes/twentyseventeen/404.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/johnjere/public_html/partyartniles.com/wp-content/themes/twentyseventeen/404.php on line 13
