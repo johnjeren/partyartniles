@@ -12,10 +12,4 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
-add_action('init', function() {
-    if (class_exists('ActionScheduler') && function_exists('as_unschedule_all_actions')) {
-        ActionScheduler::init();
-    }
-}, 1);
-
 
