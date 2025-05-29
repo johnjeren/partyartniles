@@ -343,7 +343,7 @@ function ga_head(){
     ga('send', 'pageview');
 
 </script>
-<?
+<?php
   }
 }
 add_action('wp_head', 'ga_head');
