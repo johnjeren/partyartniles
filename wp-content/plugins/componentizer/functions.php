@@ -1,11 +1,12 @@
 <?php
 
 
-/*function disable_deprecated_notices() {
-  error_reporting(E_ERROR | E_PARSE);
+function disable_deprecated_notices() {
+  // disable all except fatal errors
+  error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
   @ini_set('display_errors', 0);
 }
-add_action('init', 'disable_deprecated_notices', 1);*/
+add_action('init', 'disable_deprecated_notices', 1);
 
 require(__DIR__.'/includes/cpt.php');
 require(__DIR__.'/includes/componentizer.php');
