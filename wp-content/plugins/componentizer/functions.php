@@ -1,11 +1,11 @@
 <?php
 
 
-function disable_deprecated_notices() {
+/*function disable_deprecated_notices() {
   error_reporting(E_ERROR | E_PARSE);
   @ini_set('display_errors', 0);
 }
-add_action('init', 'disable_deprecated_notices', 1);
+add_action('init', 'disable_deprecated_notices', 1);*/
 
 require(__DIR__.'/includes/cpt.php');
 require(__DIR__.'/includes/componentizer.php');
