@@ -3,10 +3,10 @@
 
 function disable_deprecated_notices() {
   // disable all except fatal errors
-  error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
+  error_reporting(E_COMPILE_ERROR|E_RECOVERABLE_ERROR|E_ERROR|E_CORE_ERROR );
   ini_set('log_errors','on');
   ini_set('display_errors','off');
-  ini_set('error_reporting', E_ALL );
+  ini_set('error_reporting', E_COMPILE_ERROR|E_RECOVERABLE_ERROR|E_ERROR|E_CORE_ERROR);
 }
 add_action('init', 'disable_deprecated_notices', 1);
 
