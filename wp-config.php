@@ -38,6 +38,7 @@ if (file_exists($env_file)) {
 
 
 
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', $_ENV['DB_NAME'] );
@@ -57,10 +58,18 @@ define( 'DB_CHARSET', 'utf8' );
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
-define( 'WP_DEBUG', $_ENV['WP_DEBUG'] );
-define( 'WP_DEBUG_DISPLAY', $_ENV['WP_DEBUG_DISPLAY'] );
+// Enable WP_DEBUG mode
+define( 'WP_DEBUG', true );
+
+// Enable Debug logging to the /wp-content/debug.log file
 define( 'WP_DEBUG_LOG', $_ENV['WP_DEBUG_LOG'] );
 
+// Disable display of errors and warnings
+define( 'WP_DEBUG_DISPLAY', $_ENV['WP_DEBUG_DISPLAY'] );
+@ini_set( 'display_errors', 0 );
+
+// Suppress translation loading notices
+@ini_set('error_reporting', E_ALL & ~E_NOTICE);
 
 /**#@+
  * Authentication Unique Keys and Salts.
