@@ -12,13 +12,13 @@
    foreach($footer_menu as $k=>$v){
    ?>
    <div class="col-md-4 col-sm-6 col-xs-6 footer-menu-container">
-       <h3><?=get_the_title($k);?></h3>
+       <h3><?=esc_html(get_the_title($k));?></h3>
      <ul class="footer-menu">
        <?php
        foreach($v as $page_item){
         ?>
        <li>
-          <a href="<?=$page_item['url']?>" <?=$page_item['target']?'target="'.$page_item["target"].'"':'';?> <?=$page_item["attr_title"]?'title="'.$page_item["attr_title"].'"':'';?>><?=$page_item["title"]?></a>
+          <a href="<?=esc_url($page_item['url'])?>" <?=$page_item['target']?'target="'.esc_attr($page_item["target"]).'"':'';?> <?=$page_item["attr_title"]?'title="'.esc_attr($page_item["attr_title"]).'"':'';?>><?=esc_html($page_item["title"])?></a>
        </li>
        <?php
          }

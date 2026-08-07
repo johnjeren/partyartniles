@@ -1,4 +1,4 @@
-<div id="<?=@$section_id?>" class="component <?=@$namedVariables['component_class']?>">
+<div id="<?=esc_attr(@$section_id)?>" class="component <?=esc_attr(@$namedVariables['component_class'])?>">
   <?php
   foreach ($grid_block as $gb){
     $cols = 12 / count($grid_block);

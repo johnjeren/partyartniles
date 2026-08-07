@@ -2,7 +2,7 @@
 	$header_nav = function_exists('get_field') ? (get_field('header_nav','option') ? get_field('header_nav','option') : '') : '';
 	$header_nav_style = function_exists('get_field') ? get_field('header_nav_style','option') : '';
 ?>
-<nav class="navbar navbar-default navbar-<?=$header_nav_style=='fixed'?'fixed no-background':$header_nav_style;?> bootsnav on no-full">
+<nav class="navbar navbar-default navbar-<?=esc_attr($header_nav_style=='fixed'?'fixed no-background':$header_nav_style);?> bootsnav on no-full">
 	<div class="container">
 	    <!-- Start Header Navigation -->
 	    <div class="navbar-header">

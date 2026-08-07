@@ -3,13 +3,13 @@
     <?php
         if ( $header_settings['mobile_settings']['logo']){
           ?>
-          <a href="/" class="logo-link <?=$header_settings['mobile_logo_alignment']?>">
-            <img src="<?=get_img_src($header_settings['mobile_settings']['logo'],'full');?>" class="logo img-responsive" alt="">
+          <a href="/" class="logo-link <?=esc_attr($header_settings['mobile_logo_alignment'])?>">
+            <img src="<?=esc_url(get_img_src($header_settings['mobile_settings']['logo'],'full'));?>" class="logo img-responsive" alt="">
           </a>
           <?php
         }
      ?>
-    <div class="button-container <?=$header_settings['mobile_menu_expand_contract_alignment']?>" id="toggle">
+    <div class="button-container <?=esc_attr($header_settings['mobile_menu_expand_contract_alignment'])?>" id="toggle">
       <?php
       $expand_button = $header_settings['mobile_menu_expand_button'];
       if($expand_button !== ''){
@@ -19,18 +19,18 @@
       <?php }
       ?>
     </div>
-    <div class="overlay-menu-container <?=$header_settings['mobile_menu_animation']?> animated" id="overlay">
+    <div class="overlay-menu-container <?=esc_attr($header_settings['mobile_menu_animation'])?> animated" id="overlay">
       <div class="container">
         <?php
             if ( $header_settings['mobile_settings']['mobile_overlay_menu_logo']){
               ?>
-              <a href="/" class="overlay-logo-link <?=$header_settings['mobile_logo_alignment']?>">
-                <img src="<?=get_img_src($header_settings['mobile_settings']['mobile_overlay_menu_logo'],'full');?>" class="logo img-responsive" alt="">
+              <a href="/" class="overlay-logo-link <?=esc_attr($header_settings['mobile_logo_alignment'])?>">
+                <img src="<?=esc_url(get_img_src($header_settings['mobile_settings']['mobile_overlay_menu_logo'],'full'));?>" class="logo img-responsive" alt="">
               </a>
               <?php
             }
          ?>
-        <div class="overlay-button-container <?=$header_settings['mobile_menu_expand_contract_alignment']?>" id="toggle-close">
+        <div class="overlay-button-container <?=esc_attr($header_settings['mobile_menu_expand_contract_alignment'])?>" id="toggle-close">
           <?php
           $close_button = $header_settings['mobile_menu_close_button_code'];
           if($close_button !== ''){

@@ -11,16 +11,16 @@ exrepeat:: 3
   <?php
   if (@$image) {
     if(@$link) {
-      ?><a href="<?=$link?>"><?php
+      ?><a href="<?=esc_url($link)?>"><?php
     }?>
-    <img src="<?=get_img_src($image)?>" class="img-responsive" style="box-shadow: 0px 0px 3px #666">
+    <img src="<?=esc_url(get_img_src($image))?>" class="img-responsive" style="box-shadow: 0px 0px 3px #666">
     <?php
       if(@$link){
         ?></a><?php
       }
   } else {
     if(@$link){
-      ?><a href="<?=$link?>">
+      ?><a href="<?=esc_url($link)?>">
       <?php
     }?>
     <?=image('16x9')?>
@@ -31,11 +31,11 @@ exrepeat:: 3
   }
 
   if(@$link) {
-    ?><a href="<?=$link?>"><?php
+    ?><a href="<?=esc_url($link)?>"><?php
   }?>
-    <?=@$title?"<h3 class='mt5 mb0'>".$title."</h3>":""?>
+    <?=@$title?"<h3 class='mt5 mb0'>".esc_html($title)."</h3>":""?>
   <?php if(@$link){
     ?></a><?php
   } ?>
-  <?=@$text?"<p>".$text."</p>":""?>
+  <?=@$text?"<p>".esc_html($text)."</p>":""?>
 </div>

@@ -11,8 +11,8 @@ $(document).ready(function () {
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <?=@$title?"<h2>".$title."</h2>":""?>
-        <?=@$text?"<h3>".$text."</h3>":""?>
+          <?=@$title?"<h2>".esc_html($title)."</h2>":""?>
+        <?=@$text?"<h3>".esc_html($text)."</h3>":""?>
           <div class="row">
             <div class="col-sm-4 col-sm-offset-8">
               <a href="#" class="btn btn-primary btn-lg btn-block">Find out more</a>

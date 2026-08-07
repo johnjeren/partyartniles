@@ -51,7 +51,7 @@ if ( stripos($subnavigation->slug, 'on-page-navigation') !== FALSE ){
     ?>
       <?php foreach($menu as $link){?>
         <li class="<?=$link['active']?"active":""?>">
-          <a href="<?=$link['href']?>" class="sub-nav-link"><?=$link['label']?></a>
+          <a href="<?=esc_url($link['href'])?>" class="sub-nav-link"><?=esc_html($link['label'])?></a>
         </li>
         <?php } ?>
     </ul>

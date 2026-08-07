@@ -9,10 +9,10 @@ exrepeat:: 3
 ?>
 <div class="polaroid">
   <div class="shadow">
-    <a href="javascript:;" onclick="playSermon('<?=@$date?>')">
-      <img src="<?=@$image?get_img_src($image):image('16x9',TRUE)?>" class="img-responsive">
+    <a href="javascript:;" onclick="playSermon('<?=esc_js(@$date)?>')">
+      <img src="<?=@$image?esc_url(get_img_src($image)):image('16x9',TRUE)?>" class="img-responsive">
     </a>
-  <?=@$title?"<h3>".$title."</h3>":""?>
-  <?=@$text?"<p>".$text."</p>":""?>
+  <?=@$title?"<h3>".esc_html($title)."</h3>":""?>
+  <?=@$text?"<p>".esc_html($text)."</p>":""?>
   </div>
 </div>

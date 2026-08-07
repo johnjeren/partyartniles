@@ -14,11 +14,11 @@ exrepeat:: 3
       if(@$image) {
         if(@$link){
           ?>
-          <a href="<?=$link?>">
+          <a href="<?=esc_url($link)?>">
           <?php
           }
         ?>
-        <img src="<?=get_img_src($image)?>" class="img-responsive">
+        <img src="<?=esc_url(get_img_src($image))?>" class="img-responsive">
         <?php
         if(@$link) {
           ?></a><?php
@@ -26,7 +26,7 @@ exrepeat:: 3
       } else {
         if(@$link){
           ?>
-          <a href="<?=$link?>">
+          <a href="<?=esc_url($link)?>">
           <?php
         }
         ?>
@@ -38,18 +38,18 @@ exrepeat:: 3
       }
 
       if(@$link) {
-        ?><a href="<?=$link?>"><?php
+        ?><a href="<?=esc_url($link)?>"><?php
       }
       ?>
     </div>
     <div class="polaroid-text">
-      <?=@$title?"<h3>".$title."</h3>":""?>
+      <?=@$title?"<h3>".esc_html($title)."</h3>":""?>
       <?php
       if(@$link) {
         ?></a><?php
       }
       ?>
-      <?=@$text?"<p>".$text."</p>":""?>
+      <?=@$text?"<p>".esc_html($text)."</p>":""?>
     </div>
   </div>
 </div>

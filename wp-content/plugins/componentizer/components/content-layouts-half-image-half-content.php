@@ -1,17 +1,17 @@
 <style type="text/css">
-#<?=@$section_id?>.wrapper-half-<?=@$left_right?>::before {
-  background-image: url(<?=@$background_image?>);
+#<?=esc_attr(@$section_id)?>.wrapper-half-<?=esc_attr(@$left_right)?>::before {
+  background-image: url(<?=esc_url(@$background_image)?>);
   background-size: cover;
-  <?=@$left_right?>:0;
+  <?=esc_attr(@$left_right)?>:0;
 }
 @media(max-width:767px){
-  #<?=@$section_id?>.wrapper-half-<?=@$left_right?>::before {
+  #<?=esc_attr(@$section_id)?>.wrapper-half-<?=esc_attr(@$left_right)?>::before {
     background-image: none;
     width:0%;
     background-size: cover; }
 }
 </style>
-<section id="<?=@$section_id?>" class="wrapper wrapper-<?=@$style?>  wrapper-half-<?=@$left_right?> pt<?=@$padding?> pb<?=@$padding?>">
+<section id="<?=esc_attr(@$section_id)?>" class="wrapper wrapper-<?=esc_attr(@$style)?>  wrapper-half-<?=esc_attr(@$left_right)?> pt<?=esc_attr(@$padding)?> pb<?=esc_attr(@$padding)?>">
   <div class="container">
     <div class="row">
       <?php
@@ -25,14 +25,14 @@
         <?php
       }
       ?>
-      <h4><?=@$title?></h4>
+      <h4><?=esc_html(@$title)?></h4>
       <p>
-        <?=@$text?>
+        <?=wp_kses_post(@$text)?>
       </p>
       <?php
       if(@$cta_text){
         ?>
-        <a href="<?=@$cta_link?>" class="btn btn-primary"><?=$cta_text?></a>
+        <a href="<?=esc_url(@$cta_link)?>" class="btn btn-primary"><?=esc_html($cta_text)?></a>
         <?php
       }
       ?>

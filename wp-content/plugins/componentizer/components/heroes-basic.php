@@ -9,7 +9,7 @@ exvars:: {"title": "Title of image", "text": "Subtext of image is right here"}
 <div class="row mt0 hero-basic">
     <div class="col-md-12">
       <?=image('16x9')?>
-      <?=@$title?"<h2>".$title."</h2>":""?>
-      <?=@$text?"<p>".$text."</p>":""?>
+      <?=@$title?"<h2>".esc_html($title)."</h2>":""?>
+      <?=@$text?"<p>".esc_html($text)."</p>":""?>
     </div>
 </div>

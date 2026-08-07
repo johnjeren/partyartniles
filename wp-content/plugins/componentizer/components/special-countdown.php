@@ -13,7 +13,7 @@ exvars:: {"date_time": "Y/m/d H:i:s"}
 <script src="/js/jquery.countdown.js"></script>
 <script>
         $('.count_down').countdown({
-            end_time: '<?=@$date_time?>',
+            end_time: '<?=esc_js(@$date_time)?>',
             wrapper: function(unit){
                 var wrpr = $('<div></div>').
                     addClass(unit.toLowerCase()+'_wrapper').

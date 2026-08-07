@@ -91,13 +91,13 @@ function build_image($img,$size, $rel = '', $misc = []){
   $img_str = '';
   
   if($misc['lightbox'] != FALSE){
-    $img_str .= '<a href="'.$img['sizes']['large'].'" id="'.$misc['id'].'"  data-lightbox="'.$rel.'" data-title="'.$img['title'].'">';
+    $img_str .= '<a href="'.esc_url($img['sizes']['large']).'" id="'.esc_attr($misc['id']).'"  data-lightbox="'.esc_attr($rel).'" data-title="'.esc_attr($img['title']).'">';
   }
 
   if ( $size == 'full' ){
-    $img_str .= '<img src="'.$img['url'].'" id="'.$misc['id'].'" class="img-responsive" alt="'.$img['alt'].'" />';
+    $img_str .= '<img src="'.esc_url($img['url']).'" id="'.esc_attr($misc['id']).'" class="img-responsive" alt="'.esc_attr($img['alt']).'" />';
   } else {
-    $img_str .= '<img src="'.$img['sizes'][$size].'" id="'.$misc['id'].'" class="img-responsive" alt="'.$img['alt'].'" />';
+    $img_str .= '<img src="'.esc_url($img['sizes'][$size]).'" id="'.esc_attr($misc['id']).'" class="img-responsive" alt="'.esc_attr($img['alt']).'" />';
   }
 
 
@@ -198,7 +198,7 @@ function getSite(){
 
 add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
 function form_submit_button( $button, $form ) {
-    return "<button class='button btn btn-white-on-primary gform_button' id='gform_submit_button_{$form['id']}'><span>{$form['button']['text']}</span></button>";
+    return "<button class='button btn btn-white-on-primary gform_button' id='gform_submit_button_{$form['id']}'><span>" . esc_html( $form['button']['text'] ) . "</span></button>";
 }
 
 function componentizerRenderPageComponents(){

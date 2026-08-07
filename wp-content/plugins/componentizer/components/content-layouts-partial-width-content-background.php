@@ -28,13 +28,13 @@ if($block_alignment == 'center'){
 }
 
 ?>
-<section class="component half-width-content-image-bg <?=@$text_color;?> <?=@$namedVariables['component_class']?>" style="background: <?=@$background_color;?> url(<?=@$bg_img_src?>) center center;background-size:cover;" id="<?=@$section_id?>">
-  <img src="<?=@$wide_img_src?>" class="visible-xs-block img-responsive">
+<section class="component half-width-content-image-bg <?=esc_attr(@$text_color);?> <?=esc_attr(@$namedVariables['component_class'])?>" style="background: <?=esc_attr(@$background_color);?> url(<?=esc_url(@$bg_img_src)?>) center center;background-size:cover;" id="<?=esc_attr(@$section_id)?>">
+  <img src="<?=esc_url(@$wide_img_src)?>" class="visible-xs-block img-responsive">
   <div class="container">
     <div class="row">
-      <div class="<?=@$block_alignment;?> col-sm-offset-<?=$offset?>  col-sm-<?=@$block_width;?>">
-        <div class="content-container text-<?=$text_alignment?>">
-          <h2><?=@$title?></h2>
+      <div class="<?=esc_attr(@$block_alignment);?> col-sm-offset-<?=esc_attr($offset)?>  col-sm-<?=esc_attr(@$block_width);?>">
+        <div class="content-container text-<?=esc_attr($text_alignment)?>">
+          <h2><?=esc_html(@$title)?></h2>
           <?=@$subtitle!=''?'<h3 class="mt0">'.cc(@$subtitle,TRUE).'</h3>':''?>
           <p><?=cc(@$content)?></p>
           <?php

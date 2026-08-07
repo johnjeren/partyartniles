@@ -78,7 +78,7 @@ function swapLogo(stuck = false){
   if(stuck){
     if(menuDefaultLogo == false){
       menuDefaultLogo = $('.desktop-header .logo-link > .logo').attr('src');
-      $('.desktop-header .logo-link > .logo').attr('src','<?=get_img_src($header_settings['scrolled-logo'],'full')?>');
+      $('.desktop-header .logo-link > .logo').attr('src','<?=esc_js(get_img_src($header_settings['scrolled-logo'],'full'))?>');
     }
   }else{
     $('.desktop-header .logo-link > .logo').attr('src',menuDefaultLogo);
@@ -91,7 +91,7 @@ function swapMobileLogo(stuck = false){
   if(stuck){
     if(menuMobileLogo == false){
       menuMobileLogo = $('.mobile-header .logo-link > .logo').attr('src')+"";
-      $('.mobile-headers .logo-link > .logo').attr('src','<?=get_img_src($header_settings['mobile_settings']['scrolled-logo'],'full')?>');
+      $('.mobile-headers .logo-link > .logo').attr('src','<?=esc_js(get_img_src($header_settings['mobile_settings']['scrolled-logo'],'full'))?>');
     }
   }else{
     $('.mobile-header .logo-link > .logo').attr('src',menuMobileLogo);

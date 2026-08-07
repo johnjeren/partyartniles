@@ -3,12 +3,12 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7 main-col">
-        <h2><?=$title?></h2>
+        <h2><?=esc_html($title)?></h2>
         <p class="lead">
-          <?=$lead?>
+          <?=wp_kses_post($lead)?>
         </p>
         <p>
-          <?=$content?>
+          <?=wp_kses_post($content)?>
         </p>
       </div>
       <div class="col-md-5 sidebar-col ">

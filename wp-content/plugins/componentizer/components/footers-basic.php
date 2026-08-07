@@ -48,7 +48,7 @@
       </div><!-- / container -->
     </div><!-- / widget-area -->
     <div class="container">
-      <p class="footer-info text-center">© <?=date("Y")?> - <?=config('site.site_title')?></p>
+      <p class="footer-info text-center">© <?=date("Y")?> - <?=esc_html(config('site.site_title'))?></p>
     </div><!-- / container -->
   </footer>
   <?php wp_footer()?>

@@ -5,8 +5,8 @@
       <!-- Start: About-Our-Event Left Area  -->
       <div class="about-our-event-left col-md-5 wow fadeInLeft  animated" data-wow-offset="120" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; -webkit-animation-duration: 1.5s; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft;">
         <div class="about-our-event-left-body pt80 pb80">
-          <h2><?=$title?></h2>
-          <p><?=$text?></p>
+          <h2><?=esc_html($title)?></h2>
+          <p><?=wp_kses_post($text)?></p>
 
         </div>
       </div>
@@ -19,8 +19,8 @@
             foreach($details as $d){
               ?>
               <div class="col-sm-12 background event-about" style="border-bottom:2px #fff solid;padding-bottom:15px;">
-                <span class="title style-all"><?=$d['title']?></span>
-                <span class="details"><?=$d['text']?></span>
+                <span class="title style-all"><?=esc_html($d['title'])?></span>
+                <span class="details"><?=esc_html($d['text'])?></span>
               </div>
               <?php
             }

@@ -9,16 +9,17 @@
       <div class="row">
         <div class="col-md-4 col-sm-6">
           <p>
-            <?=function_exists('the_field') ? the_field('street_address','option') : '';?>
+            <?=esc_html(function_exists('get_field') ? get_field('street_address','option') : '');?>
           </p>
           <p>
-            <?=function_exists('the_field') ? the_field('city','option') : '';?>,&nbsp;<?=function_exists('the_field') ? the_field('state','option') : '';?>&nbsp;&nbsp;<?=function_exists('the_field') ? the_field('zip_code','option') : '';?>
+            <?=esc_html(function_exists('get_field') ? get_field('city','option') : '');?>,&nbsp;<?=esc_html(function_exists('get_field') ? get_field('state','option') : '');?>&nbsp;&nbsp;<?=esc_html(function_exists('get_field') ? get_field('zip_code','option') : '');?>
           </p>
           <p>
-            <?=function_exists('the_field') ? the_field('phone_number','option') : '';?>
+            <?=esc_html(function_exists('get_field') ? get_field('phone_number','option') : '');?>
           </p>
           <p>
-            <a href="mailto:<?=function_exists('the_field') ? the_field('email_address','option') : '';?>"><?=function_exists('the_field') ? the_field('email_address','option') : '';?></a>
+            <?php $email_address = function_exists('get_field') ? get_field('email_address','option') : ''; ?>
+            <a href="mailto:<?=esc_attr($email_address)?>"><?=esc_html($email_address)?></a>
           </p>
         </div>
         <div class="col-md-8 col-sm-6">

@@ -22,8 +22,8 @@ if(is_array(@$video)){
 
 ?>
 
-<section id="<?=@$section_id?>" class="component full-screen-billboard <?=@$light_dark?> <?=@$text_alignment?$text_alignment:'center'?> <?=@$parallax?'parallax-window':''?> <?=@$namedVariables['component_class']?>" <?=@$parallax?'data-parallax="scroll" data-image-src="'.get_img_src($background_image,'full').'"':''?> style="<?=@$height=='Full Height'?'height:100vh;':'height:auto;'?>
-  <?=@$padding_top?'padding-top:'.$padding_top.';':'';?><?=@$padding_bottom?'padding-bottom:'.$padding_bottom.';':'';?><?=@$background_color?'background-color: '.$background_color.'; ':''?> position: relative; <?=@$background_image&&!@$parallax?'background: '.@$background_color.' url('.get_img_src($background_image,'full').') center center; ':''?><?=@$bg_effect=='fixed'?'background-attachment: fixed; ':''?>background-size:cover;">
+<section id="<?=esc_attr(@$section_id)?>" class="component full-screen-billboard <?=esc_attr(@$light_dark)?> <?=esc_attr(@$text_alignment?$text_alignment:'center')?> <?=@$parallax?'parallax-window':''?> <?=esc_attr(@$namedVariables['component_class'])?>" <?=@$parallax?'data-parallax="scroll" data-image-src="'.esc_url(get_img_src($background_image,'full')).'"':''?> style="<?=@$height=='Full Height'?'height:100vh;':'height:auto;'?>
+  <?=@$padding_top?'padding-top:'.esc_attr($padding_top).';':'';?><?=@$padding_bottom?'padding-bottom:'.esc_attr($padding_bottom).';':'';?><?=@$background_color?'background-color: '.esc_attr($background_color).'; ':''?> position: relative; <?=@$background_image&&!@$parallax?'background: '.esc_attr(@$background_color).' url('.esc_url(get_img_src($background_image,'full')).') center center; ':''?><?=@$bg_effect=='fixed'?'background-attachment: fixed; ':''?>background-size:cover;">
   
   <div style="position: relative">
     <div class="container">

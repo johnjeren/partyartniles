@@ -13,8 +13,8 @@ exrepeat:: 2
       <?=image('16x9')?>
     </div>
     <div class="col-md-8">
-      <?=@$title?"<h3 class='mt0'>".$title."</h3>":""?></h3>
-      <?=@$text?"<p>".$text."</p>":""?>
+      <?=@$title?"<h3 class='mt0'>".esc_html($title)."</h3>":""?></h3>
+      <?=@$text?"<p>".esc_html($text)."</p>":""?>
     </div>
   </div>
 </div>

@@ -8,7 +8,7 @@ exrepeat:: 4
 ***/
 ?>
 <div class="image-title-description-vertical">
-  <?=@$image?get_img_src($image):image('square')?>
-  <?=@$title?"<h3>".$title."</h3>":""?></h3>
-  <?=@$text?"<p>".$text."</p>":""?>
+  <?=@$image?esc_url(get_img_src($image)):image('square')?>
+  <?=@$title?"<h3>".esc_html($title)."</h3>":""?></h3>
+  <?=@$text?"<p>".esc_html($text)."</p>":""?>
 </div>

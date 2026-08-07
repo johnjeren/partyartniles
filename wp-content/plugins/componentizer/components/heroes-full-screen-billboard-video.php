@@ -1,4 +1,4 @@
-<div class="component full-screen-billboard-video <?=@$text_alignment?$text_alignment:'center'?> <?=$namedVariables['component_class']?>">
+<div class="component full-screen-billboard-video <?=esc_attr(@$text_alignment?$text_alignment:'center')?> <?=esc_attr($namedVariables['component_class'])?>">
   <?php
     $video_str_arr = [];
     foreach($video as $v){
@@ -10,10 +10,10 @@
    ?>
 
   <div class="video-div" style="width: 100%; height: 100vh;"
-    data-vide-bg="<?=$video_string?>, poster: <?=get_img_src($background_image,'background');?>"
+    data-vide-bg="<?=esc_attr($video_string)?>, poster: <?=esc_url(get_img_src($background_image,'background'));?>"
     data-vide-options="className: billboard-video, loop: true, muted: false, position: 50% 50%, autoplay: true, resizing: true">
   </div>
-  <div class="video-content-container" style="padding-top:<?=@$padding_top?$padding_top:'25vh';?>;padding-bottom:<?=@$padding_bottom?$padding_bottom:'25vh';?>;<?=@$height=='full-height'?'height:100vh;':'height:auto;'?>">
+  <div class="video-content-container" style="padding-top:<?=esc_attr(@$padding_top?$padding_top:'25vh');?>;padding-bottom:<?=esc_attr(@$padding_bottom?$padding_bottom:'25vh');?>;<?=@$height=='full-height'?'height:100vh;':'height:auto;'?>">
 
   <div class="container">
     <div class="row">

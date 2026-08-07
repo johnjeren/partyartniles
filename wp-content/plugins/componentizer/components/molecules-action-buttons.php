@@ -1,4 +1,4 @@
-<div class="action-buttons clearfix pull-<?=@$align?$align:'left'?>">
+<div class="action-buttons clearfix pull-<?=esc_attr(@$align?$align:'left')?>">
   <?php
   $first = TRUE;
   foreach ($action_buttons as $button){

@@ -6,10 +6,10 @@ variables:: $title
 exvars:: {"title": "Title Goes here"}
 ***/
 ?>
-<div class="container component <?=$namedVariables['component_class']?>">
+<div class="container component <?=esc_attr($namedVariables['component_class'])?>">
   <div class="row section-title-basic">
     <div class="col-sm-12">
-      <h2><?=$text?></h2>
+      <h2><?=esc_html($text)?></h2>
     </div>
   </div>
 </div>

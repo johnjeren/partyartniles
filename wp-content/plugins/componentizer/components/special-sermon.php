@@ -9,12 +9,12 @@ exrepeat:: 2
     <div class="sermon-container">
     <div class="row">
       <div class="col-xs-12" >
-        <img src="<?=@get_img_src($image)?>" class="img-responsive" />
+        <img src="<?=esc_url(@get_img_src($image))?>" class="img-responsive" />
       </div>
       <div class="col-xs-12">
-          <h3 class="sermon-title"><span class="date"><?=$date?></span>&nbsp;<?=$title?></h3>
+          <h3 class="sermon-title"><span class="date"><?=esc_html($date)?></span>&nbsp;<?=esc_html($title)?></h3>
         <div class="sermon-detail">
-          <span class="detail-type">Sermon Series:</span> <a href="/sermon-series/upside-down"><?=$sermon_series?></a> / <span class="detail-type">Speaker:</span> <?=$speaker?>
+          <span class="detail-type">Sermon Series:</span> <a href="/sermon-series/upside-down"><?=esc_html($sermon_series)?></a> / <span class="detail-type">Speaker:</span> <?=esc_html($speaker)?>
           <div class="media-links">
             <ul>
               <li>

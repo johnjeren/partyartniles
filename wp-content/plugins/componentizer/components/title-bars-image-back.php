@@ -12,8 +12,8 @@ fullwidth:: "true"
 <?php }else{?>
   <?php $image = templatePath().'/img/title-banner.png';?>
 <?php }?>
-<div class="title-image-back" style="background-image:url(<?=$image?>);background-size:cover;background-position:center center;">
+<div class="title-image-back" style="background-image:url(<?=esc_url($image)?>);background-size:cover;background-position:center center;">
   <div class="tag">
-    <h1><?=$text?></h1>
+    <h1><?=esc_html($text)?></h1>
   </div>
 </div>

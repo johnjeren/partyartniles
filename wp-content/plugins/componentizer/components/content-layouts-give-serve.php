@@ -1,4 +1,4 @@
-<section id="give" class="wrapper wrapper-<?=@$style?> wrapper-sm wrapper-half-left">
+<section id="give" class="wrapper wrapper-<?=esc_attr(@$style)?> wrapper-sm wrapper-half-left">
   <div class="container">
     <div class="row">
       <div class="col-xs-6 secondary-text-color text-right">

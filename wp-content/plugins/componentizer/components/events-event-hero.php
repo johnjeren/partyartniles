@@ -7,12 +7,12 @@
           'date_time'=>date('Y/m/d H:i:s', $start_date)])?>
 
       <div class="col-md-offset-1 col-md-5 heading fadeInUp animated" data-wow-offset="120" data-wow-duration="1.5s">
-        <h1><b><?=$title?></b></h1>
-        <h2><?=$display_date?></h2>
+        <h1><b><?=esc_html($title)?></b></h1>
+        <h2><?=esc_html($display_date)?></h2>
       </div>
 
       <div class="col-md-5 pera fadeInUp animated" data-wow-offset="120" data-wow-duration="1.5s">
-        <p><?=$short_desc?></p>
+        <p><?=wp_kses_post($short_desc)?></p>
         <!-- Start: Button area -->
         <div class="buy-ticket btn-scroll">
           <div class="btn-group">

@@ -30,7 +30,7 @@ if( function_exists('acf_add_options_page') ) {
 		'page_title' 	=> 'Theme General Settings',
 		'menu_title'	=> 'Theme Settings',
 		'menu_slug' 	=> 'theme-general-settings',
-		'capability'	=> 'edit_posts',
+		'capability'	=> 'manage_options',
 		'redirect'		=> false,
     'icon_url'    => 'dashicons-admin-customizer',
     'position'    => 58
@@ -209,9 +209,9 @@ add_action( 'wp_enqueue_scripts', 'wpb_add_inline_css', 25 ); //Enqueue the CSS 
 function comp_add_global_scripts(){
     //wp_register_script( 'jarallax',
     wp_enqueue_script('jarallax', 'https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.7.3/jarallax.min.js', null, null, true );
-    wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), '3.3.7', false );
+    wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js', array('jquery'), '3.4.1', false );
     wp_deregister_script('jquery');
-    wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-2.2.4.min.js', array(), false, false);
+    wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.7.1.min.js', array(), '3.7.1', false);
     wp_enqueue_script( 'on-page-scroll', componentizer_plugin_path().'js/onPageScroll.js', null, null, true );
     wp_enqueue_script( 'lightbox-js', componentizer_plugin_path().'js/lightbox/js/lightbox.min.js', null, null, true );
     wp_enqueue_script('vide',componentizer_plugin_path().'js/jquery.vide.min.js', null, null, true);
@@ -245,7 +245,7 @@ add_action( 'wp_enqueue_scripts', 'comp_add_global_scripts' ); //Enqueue the CSS
    'slug'=>'code',
  ],[
    'has_archive'=>false,
-   'capability_type'	=> ['edit_posts'],
+   'capability_type'	=> ['manage_options', 'manage_options'],
    'map_meta_cap'=> true,
    'menu_icon'=>'dashicons-editor-code'
  ]);
@@ -342,7 +342,7 @@ function ga_head(){
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', '<?=$ga_id?>', 'auto');
+    ga('create', '<?=esc_js($ga_id)?>', 'auto');
     ga('send', 'pageview');
 
 </script>
@@ -391,6 +391,9 @@ add_filter( 'query_vars', 'componentizer_docs_register_query_var' );
 
 function componentizer_docs_url_rewrite_templates() {
     if ( get_query_var( 'componentizer_docs' ) ) {
+        if ( ! current_user_can( 'manage_options' ) ) {
+            wp_die( 'Access denied.', 403 );
+        }
         add_filter( 'template_include', function() {
             return __DIR__ . '/componentizer_docs.php';
         });

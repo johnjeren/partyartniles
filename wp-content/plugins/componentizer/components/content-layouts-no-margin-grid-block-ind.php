@@ -22,14 +22,14 @@ fullwidth:: true
   }
 
   ?>
-  <div class="no-margin-grid-block col-sm-<?=@$sm_cols?> col-md-<?=@$cols?> pr0 pl0" style="background: <?=@$background_color;?> url(<?=get_img_src(@$background_image,'square')?>);height:<?=@$height;?>vh;background-size:cover;background-position:center center;">
-    <a class="link" href="<?=@$link?>" <?=@$link=='#'?'style="cursor:default;"':'';?>>
+  <div class="no-margin-grid-block col-sm-<?=esc_attr(@$sm_cols)?> col-md-<?=esc_attr(@$cols)?> pr0 pl0" style="background: <?=esc_attr(@$background_color);?> url(<?=esc_url(get_img_src(@$background_image,'square'))?>);height:<?=esc_attr(@$height);?>vh;background-size:cover;background-position:center center;">
+    <a class="link" href="<?=esc_url(@$link)?>" <?=@$link=='#'?'style="cursor:default;"':'';?>>
       <div class="block <?=@$link!=='#'?'has_link':'';?>">
         <div class="content">
           <?php
             if ( @$title != '' ){
               ?>
-              <h3><span><?=$title?></span></h3>
+              <h3><span><?=esc_html($title)?></span></h3>
               <?php
               }
             ?>
