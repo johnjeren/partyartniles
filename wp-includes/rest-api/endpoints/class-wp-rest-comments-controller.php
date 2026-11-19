@@ -485,7 +485,7 @@ class WP_REST_Comments_Controller extends WP_REST_Controller {
 		}
 
 		// Limit who can set comment `author`, `author_ip` or `status` to anything other than the default.
-		if ( isset( $request['author'] ) && get_current_user_id() !== $request['author'] && ! current_user_can( 'moderate_comments' ) ) {
+		if ( isset( $request['author'] ) && get_current_user_id() !== $request['author'] && ! $this->check_assign_author_permission( $request['author'] ) ) {
 			return new WP_Error(
 				'rest_comment_invalid_author',
 				/* translators: %s: Request parameter. */
@@ -781,6 +781,7 @@ class WP_REST_Comments_Controller extends WP_REST_Controller {
 	 * Checks if a given REST request has access to update a comment.
 	 *
 	 * @since 4.7.0
+	 * @since 7.1.0 Target post permissions are checked when a comment's parent post is changed.
 	 *
 	 * @param WP_REST_Request $request Full details about the request.
 	 * @return true|WP_Error True if the request has access to update the item, error object otherwise.
@@ -797,6 +798,40 @@ class WP_REST_Comments_Controller extends WP_REST_Controller {
 				__( 'Sorry, you are not allowed to edit this comment.' ),
 				array( 'status' => rest_authorization_required_code() )
 			);
+		}
+
+		/*
+		 * Reassigning a comment copies the new author's email address onto it,
+		 * which is then returned in the response.
+		 */
+		if (
+			isset( $request['author'] ) &&
+			(int) $request['author'] !== (int) $comment->user_id &&
+			get_current_user_id() !== (int) $request['author'] &&
+			! $this->check_assign_author_permission( $request['author'] )
+		) {
+			return new WP_Error(
+				'rest_comment_invalid_author',
+				/* translators: %s: Request parameter. */
+				sprintf( __( "Sorry, you are not allowed to edit '%s' for comments." ), 'author' ),
+				array( 'status' => rest_authorization_required_code() )
+			);
+		}
+
+		/*
+		 * check_edit_permission() above only establishes that the comment may be
+		 * edited where it currently sits, because 'edit_comment' maps to 'edit_post'
+		 * on the comment's current parent. When the parent is being changed, the new
+		 * parent has to be authorized as well. Without this, a user holding
+		 * edit_comment on their own comment could reparent it onto any post,
+		 * including posts they can neither read nor edit.
+		 */
+		if ( isset( $request['post'] ) && (int) $request['post'] !== (int) $comment->comment_post_ID ) {
+			$target_check = $this->check_target_post_permission( (int) $request['post'] );
+
+			if ( is_wp_error( $target_check ) ) {
+				return $target_check;
+			}
 		}
 
 		return true;
@@ -824,6 +859,15 @@ class WP_REST_Comments_Controller extends WP_REST_Controller {
 				__( 'Sorry, you are not allowed to change the comment type.' ),
 				array( 'status' => 404 )
 			);
+		}
+
+		/*
+		 * Re-sending the current author is a no-op. Otherwise the author's details
+		 * would be refreshed from their user account, exposing any change to their
+		 * email address to whoever can edit the comment.
+		 */
+		if ( isset( $request['author'] ) && (int) $request['author'] === (int) $comment->user_id ) {
+			unset( $request['author'] );
 		}
 
 		$prepared_args = $this->prepare_item_for_database( $request );
@@ -1866,6 +1910,18 @@ class WP_REST_Comments_Controller extends WP_REST_Controller {
 	}
 
 	/**
+	 * Checks whether the current user can attribute a comment to another user.
+	 *
+	 * @since 7.1.5
+	 *
+	 * @param int $author_id ID of the user the comment is being attributed to.
+	 * @return bool Whether the comment can be attributed to the user.
+	 */
+	protected function check_assign_author_permission( $author_id ) {
+		return current_user_can( 'moderate_comments' ) && is_user_member_of_blog( $author_id );
+	}
+
+	/**
 	 * Checks a comment author email for validity.
 	 *
 	 * Accepts either a valid email address or empty string as a valid comment
@@ -1927,5 +1983,59 @@ class WP_REST_Comments_Controller extends WP_REST_Controller {
 		 * comment_content. See wp_handle_comment_submission().
 		 */
 		return '' !== $check['comment_content'];
+	}
+
+	/**
+	 * Checks that a post can receive a comment from the current user.
+	 *
+	 * Used when changing the parent post of an existing comment, so that
+	 * attaching a comment to a post is authorized the same way whichever
+	 * path it arrives by.
+	 *
+	 * @since 7.1.0
+	 *
+	 * @param int $post_id Target post ID.
+	 * @return true|WP_Error True if the post can receive the comment, error object otherwise.
+	 */
+	protected function check_target_post_permission( $post_id ) {
+		if ( ! $post_id ) {
+			return new WP_Error(
+				'rest_comment_invalid_post_id',
+				__( 'Sorry, you are not allowed to create this comment without a post.' ),
+				array( 'status' => 403 )
+			);
+		}
+
+		/*
+		 * A comment needs either comment moderation rights or edit access to the
+		 * post, which is what check_edit_permission() grants on the post a comment
+		 * is moving away from. Requiring the same at the destination means both
+		 * ends of a move are authorized alike.
+		 */
+		if ( ! current_user_can( 'moderate_comments' ) && ! current_user_can( 'edit_post', $post_id ) ) {
+			return new WP_Error(
+				'rest_cannot_edit',
+				__( 'Sorry, you are not allowed to edit this comment.' ),
+				array( 'status' => rest_authorization_required_code() )
+			);
+		}
+
+		$post = get_post( $post_id );
+
+		if ( ! $post ) {
+			return new WP_Error(
+				'rest_comment_invalid_post_id',
+				__( 'Sorry, you are not allowed to create this comment without a post.' ),
+				array( 'status' => 403 )
+			);
+		}
+
+		/*
+		 * The create-time draft and comments-open rules are deliberately not applied
+		 * here, because moderators move comments onto posts whose discussion has
+		 * closed and onto drafts today. Enforcing them would break that without
+		 * blocking anything the capability check above already permits.
+		 */
+		return true;
 	}
 }

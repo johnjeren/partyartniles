@@ -463,7 +463,13 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 			}
 
 			foreach ( $query_result as $post ) {
-				if ( ! $this->check_read_permission( $post ) ) {
+				if ( 'edit' === $request['context'] ) {
+					$permission = $this->check_update_permission( $post );
+				} else {
+					$permission = $this->check_read_permission( $post );
+				}
+
+				if ( ! $permission ) {
 					continue;
 				}
 
@@ -689,7 +695,7 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 			);
 		}
 
-		if ( ! empty( $request['sticky'] ) && ! current_user_can( $post_type->cap->edit_others_posts ) && ! current_user_can( $post_type->cap->publish_posts ) ) {
+		if ( ! empty( $request['sticky'] ) && ( ! current_user_can( $post_type->cap->edit_others_posts ) || ! current_user_can( $post_type->cap->publish_posts ) ) ) {
 			return new WP_Error(
 				'rest_cannot_assign_sticky',
 				__( 'Sorry, you are not allowed to make posts sticky.' ),
@@ -900,7 +906,7 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 			);
 		}
 
-		if ( ! empty( $request['sticky'] ) && ! current_user_can( $post_type->cap->edit_others_posts ) && ! current_user_can( $post_type->cap->publish_posts ) ) {
+		if ( isset( $request['sticky'] ) && is_sticky( $post->ID ) !== (bool) $request['sticky'] && ( ! current_user_can( $post_type->cap->edit_others_posts ) || ! current_user_can( $post_type->cap->publish_posts ) ) ) {
 			return new WP_Error(
 				'rest_cannot_assign_sticky',
 				__( 'Sorry, you are not allowed to make posts sticky.' ),
@@ -1376,12 +1382,11 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 
 		// Author.
 		if ( ! empty( $schema['properties']['author'] ) && ! empty( $request['author'] ) ) {
-			$post_author = (int) $request['author'];
+			$post_author    = (int) $request['author'];
+			$current_author = isset( $existing_post ) ? (int) $existing_post->post_author : 0;
 
-			if ( get_current_user_id() !== $post_author ) {
-				$user_obj = get_userdata( $post_author );
-
-				if ( ! $user_obj ) {
+			if ( get_current_user_id() !== $post_author && $current_author !== $post_author ) {
+				if ( ! is_user_member_of_blog( $post_author ) ) {
 					return new WP_Error(
 						'rest_invalid_author',
 						__( 'Invalid author ID.' ),
